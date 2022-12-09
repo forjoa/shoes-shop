@@ -1,0 +1,255 @@
+:root{
+    --letra: #000000;
+    --fondo: #E5E5CF;
+    --hovers: #4a3c1f;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-size: 16px; /* 1rem=10px */
+    background-color: var(--fondo);
+    font-family:'New Rocker', cursive;
+    color: var(--hovers);
+}
+
+.p-list{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    list-style: none; 
+    box-shadow: 0px 3px 16px -9px rgba(0,0,0,0.9);
+}
+
+.p-list a{
+    color: var(--hovers);
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    padding: 2rem;
+}
+
+.p-list a:hover{
+    background-color: var(--hovers);
+    color: white;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-image: linear-gradient(
+        180deg,
+        #4a3c1f,
+        #8b794e7c
+    );
+}
+
+.navegacion-principal{
+    background-image: linear-gradient(
+        180deg,
+        #d7d7b4,
+        #3226177c
+    );
+}
+
+.contenedor-uno{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+    gap: 5rem;
+}
+
+.for-u {
+    color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: larger;
+    margin-top: 4rem;
+    background-image: linear-gradient(
+        180deg,
+        #e5e3cf,
+        #4a3c1f
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    
+}
+
+.for-u h1{
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    .p-list{
+        flex-direction: column;
+    }
+    .for-u{
+        padding-left: 0;
+        align-items: center;
+        margin-top: 0;
+    }
+    .contenedor-uno{
+        padding-top: 0;
+        flex-direction: column; 
+        gap: 85px;
+    }
+    
+}
+
+.carrusel{
+    width: 100%;
+    overflow: hidden;
+}
+
+.carrusel ul{
+    display: flex;
+    margin: 5px;
+    width: 800%;
+
+    animation: cambio 20s infinite;
+    animation-direction: alternate;
+}
+
+.carrusel ul li{
+    width: 100%;
+    list-style: none;
+    text-align: center;
+}
+
+.carrusel img{
+    width: 60%;
+}
+
+@keyframes cambio {
+
+    0% {margin-left: 0;}
+    9.5% {margin-left: 0;}
+
+    12.5% {margin-left: -100%;}
+    22% {margin-left: -100%;}
+
+    25% {margin-left: -200%;}
+    34.5% {margin-left: -200%;}
+
+    37.5% {margin-left: -300%;}
+    47% {margin-left: -300%;}
+
+    50% {margin-left: -400%;}
+    59.5% {margin-left: -400%;}
+
+    62.5% {margin-left: -500%;}
+    72% {margin-left: -500%;}
+
+    75% {margin-left: -600%;}
+    84.5% {margin-left: -600%;}
+
+    87.5% {margin-left: -700%;}
+    100% {margin-left: -700%;}
+    
+}
+
+
+.carrusel-item{
+    height: 50rem;
+}
+
+.description {
+    display: flex;
+    justify-content: center;
+    height: 20%;
+    padding: 10% 10% 10% 10%;
+}
+
+.toggle-button{
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .bar{
+    height: 3px;
+    width: 100%;
+    background-color: var(--hovers);
+    border-radius: 10px;
+
+}
+
+@media (max-width: 600px) {
+    .description{
+        padding: 0 5rem 5rem 5rem;
+    }
+
+    .carrusel img{
+        height: 90%;
+        width: 100%;
+    }
+
+    .toggle-button{
+        display: flex;
+    }
+
+    .p-list{
+        display: none;
+        width: 100%;
+    }
+
+    .p-list li{
+        text-align: center;
+    }
+
+    .navegacion-principal{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .p-list.active{
+        display: flex;
+    }
+
+    .p-list a{
+        padding: 10px;
+    }
+
+    #number{
+        display:inherit;
+        margin-top: 11px;
+        margin-left: 10px;
+    }
+}
+
+.social-media{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none; 
+    background-color: var(--hovers);
+    height: 5%;
+    
+    background-image: linear-gradient(
+        180deg,
+        #6c684d,
+        #3226177c
+    );
+}
+
+.social-media a{
+    text-decoration: none;
+    color: var(--fondo);
+
+}
+
+
